@@ -143,7 +143,12 @@
 								<div class="col-md-10">
 									<div class="feature-text">
 										<h4>Inherent support of variant packages</h4>
-										<p>Other frameworks may refer to these as “flavors” or “slave ports”.  A variant package set is one that is built with a different configuration over the standard set.  The use of variant packages eliminates the need for user-configurable options, meaning the consumer is likely to have access to a pre-built binary package and not have to build the software themselves.</p>
+										<p>Other frameworks may refer to these as “flavors” or “slave
+										ports”. A variant package set is one that is built with a
+										different configuration over the standard set. The use of variant
+										packages eliminates the need for user-configurable options,
+										meaning the consumer is likely to have access to a pre-built binary
+										package and not have to build the software themselves.</p>
 									</div>
 								</div>
 							</div>
@@ -161,7 +166,16 @@
 								<div class="col-md-10">
 									<div class="feature-text">
 										<h4>Inherently higher quality build procedures</h4>
-										<p>Most other frameworks are based on makefiles or shell scripts.  Ravenports are compiled into a single “buildsheet”.  Mistakes by developers are caught during the compilation process, so syntax and formatting are always correct.  Unlike other frameworks, there’s exactly one way to build Ravenports, meaning that if a new port or modification builds successfully for a contributor, it will build identically for an evaluator.  Submission checks are capable of being automated and performed against multiple platforms before a human ever sees them.  This leds to much better submissions and eliminates unnecessary multiple review cycles.</p>
+										<p>Most other frameworks are based on makefiles or shell scripts.
+										Ravenports are compiled into a single “buildsheet”. Mistakes by
+										developers are caught during the compilation process, so syntax and
+										formatting are always correct.  Unlike other frameworks, there’s
+										exactly one way to build Ravenports, meaning that if a new port or
+										modification builds successfully for a contributor, it will build
+										identically for an evaluator. Submission checks are capable of being
+										automated and performed against multiple platforms before a human ever
+										sees them. This leds to much better submissions and eliminates
+										unnecessary multiple review cycles.</p>
 									</div>
 								</div>
 							</div>
@@ -186,10 +200,10 @@
 										<h4>Inherent support of subpackages</h4>
 										<p>Other frameworks require separate ports if they want to split
 										documentation, examples, libraries, or anything other components into
-										separate packages to sanely satisfy dependency requirements.  This
+										separate packages to sanely satisfy dependency requirements. This
 										requires redundant rebuilding and risks getting related ports out of
-										sync.  Ravenports allows many subpackages to be generated simultaneously
-										by a single port and this capability is heavily used.  This allows for
+										sync. Ravenports allows many subpackages to be generated simultaneously
+										by a single port and this capability is heavily used. This allows for
 										fine-grain dependency specification (e.g. just pull a fortran runtime
 										library instead of the entire GCC compiler collection.)</p>
 									</div>
@@ -210,11 +224,12 @@
 									<div class="feature-text">
 										<h4>Multiple package formats possible</h4>
 										<p>Currently only one package format is supported, which is the first
-										version defined by pkg(8), the FreeBSD package manager.  This package
-										manager has been throughly tested on all platforms supported by
-										Ravenports.  Given interest, other package managers could be supported
-										such as the Image Packaging System (IPS), Archlinux’s pacman, Debian
-										DPKG family, etc.</p>
+										version defined by pkg(8), the FreeBSD package manager. This package
+										manager has been forked as ravensw(8) with new features as well as
+										enhanced portability. It has been throughly tested on all platforms
+										supported by Ravenports. Given interest, other package managers could
+										be supported such as the Image Packaging System (IPS), Arch Linux’s
+										pacman, Debian's DPKG family, etc.</p>
 									</div>
 								</div>
 							</div>
@@ -239,11 +254,11 @@
 										These allow, among other things, to freeze software at a specific version.
 										Companies are not forced to use the versions in quarterly sets or the
 										bleeding-edge tree, nor is support tied to the End-of-Life (EOL) of any
-										operating system release.  Ports version tailoring can be provided as a
+										operating system release. Ports version tailoring can be provided as a
 										service to the company which has the added benefit of receiving security
 										updates on a weekly basis.</p>
 										<p>Using other frameworks can lead to frustration when help is urgently
-										needed but all the developers contribute on a volunteer basis.  Corporate
+										needed but all the developers contribute on a volunteer basis. Corporate
 										users of Ravenports have the option of obtaining professional service when
 										required.</p>
 									</div>
@@ -263,15 +278,15 @@
 									<div class="feature-text">
 										<h4>Entire tree integrity</h4>
 										<p>Other frameworks receive ports updates many times a day, sometimes
-										numbering in the hundreds.  Coupled with a much lower quality (a result
+										numbering in the hundreds. Coupled with a much lower quality (a result
 										of a wide range of volunteer developer skills coupled with little or no
 										quality assurance checks and impact assessments), ports trees break
-										frequently and often without addressing downstream breaking.  Ravenports
-										stages the changes for several days.  A complete build of the ports tree
-										is done to ensure tree integrity.  The ports tree is published on weekly
-										after any fallout issues are address to avoid surprises.  This also
+										frequently and often without addressing downstream breaking. Ravenports
+										stages the changes for several days. A complete build of the ports tree
+										is done to ensure tree integrity. The ports tree is published when
+										ready after any fallout issues are addressed to avoid surprises. This also
 										prevents temptation by users to update and rebuild daily, which would
-										result in constant and frustrating build churn.  Finally, a weekly
+										result in constant and frustrating build churn. Finally, a roughly weekly
 										publishing schedule allows the ports tree and provided binary packages to
 										remain in sync, making it possible to safely mix ports and packages.</p>
 									</div>
@@ -295,13 +310,13 @@
 										<h4>Build performance</h4>
 										<p>This advantage does not benefit system adminstrators that exclusively
 										use prebuilt binary packages, but it is greatly appreciated by those that
-										build their own packages.  Ravenports can scan and process the ports tree
-										hundreds to thousands of times faster than similar frameworks.  Unlike the
+										build their own packages. Ravenports can scan and process the ports tree
+										hundreds to thousands of times faster than similar frameworks. Unlike the
 										others, Ravenports has an administration/build utility that’s fully
-										integrated and not a bolt-on tool.  The utility, ravenadm, is written in
+										integrated and not a bolt-on tool. The utility, ravenadm, is written in
 										Ada and capable of high concurrency to take full advantage of powerful
-										build machines.  Full tree scans which may take minutes (up to an hour on
-										pkgsrc) are accomplished in less than 1 second by ravenadm.  Every aspect
+										build machines. Full tree scans which may take minutes (up to an hour on
+										pkgsrc) are accomplished in less than 1 second by ravenadm. Every aspect
 										of the framework is geared towards build quality and performance,
 										resulting in significantly shorter build times over comparable frameworks.</p>
 									</div>
@@ -320,18 +335,16 @@
 								<div class="col-md-10">
 									<div class="feature-text">
 										<h4>Concurrently installed versions</h4>
-										<p>
-												Several popular projects maintain several branch releases.  For
-												example, the Perl project has 3 concurrent versions.  Python, Ruby,
-												most database servers and other projects do as well.  Ravenports
-												always supports two versions of perl and provides packages for both
-												which can be installed concurrently.  The same case exists for Python
-												for the last two 3.x releases.
-												The PHP branches have unique installations so even multiple versions
-												of PHP can be installed together.  Default database server versions can be
-												specified per repository, but currently only a single version can be
-												installed at a time.
-										</p>
+										<p>Several popular projects maintain several branch releases. For
+										example, the Perl project has 3 concurrent versions. Python, Ruby,
+										most database servers and other projects do as well. Ravenports
+										always supports two versions of Perl and provides packages for both
+										which can be installed concurrently. The same case exists for Python
+										for the last two 3.x releases.</p>
+										<p>The PHP branches have unique installations so even multiple versions
+										of PHP can be installed together. Default database server versions can be
+										specified per repository, but currently only a single version can be
+										installed at a time.</p
 									</div>
 								</div>
 							</div>
@@ -358,14 +371,14 @@
 
 			<div class="container single-blog">
 				<p class="text">
-						Ravenports has been designed to support any POSIX-compliant operating
-						system outside of Microsoft Windows.  While it self-identifies as “universal”,
-						Ravenports must be bootstrapped to the point of self-hosting on each supported
-						architecture of each supported operating system.   For the core developers, the
-						main architectures targeted are the x86_64 and ARM Aarch64.  New architecture
-						support from serious contributors capable of performing the initial bootstrap
-						and periodic quality-assurance builds of the entire Ravenports tree will be
-						accepted into the project.
+						Ravenports has been designed to support any POSIX-compliant operating system
+						outside of Microsoft Windows. While it self-identifies as “universal”, Ravenports
+						must be bootstrapped to the point of self-hosting on each supported architecture
+						of each supported operating system. For the core developers, the main architectures
+						targeted are the <strong>x86_64</strong> and <strong>ARM64</strong>.  New architecture
+						support from serious contributors capable of performing the initial bootstrap and
+						periodic quality-assurance builds of the entire Ravenports tree will be accepted
+						into the project.
 				</p>
 			</div>
 
@@ -381,11 +394,12 @@
 								<p class="lead">Currently supported platforms</p>
 						</div>
 						<ul class="list-group list-group-flush text-center">
-							<li class="list-group-item"><i class="icon-ok text-success"></i> DragonFly 5.0 and later</li>
-							<li class="list-group-item"><i class="icon-ok text-success"></i> FreeBSD/amd64 Release 11 and later</li>
+							<li class="list-group-item"><i class="icon-ok text-success"></i> DragonFly 6.0 and later</li>
+							<li class="list-group-item"><i class="icon-ok text-success"></i> FreeBSD/amd64 Release 12 and later</li>
 							<li class="list-group-item"><i class="icon-ok text-success"></i> Linux/x86-64 (glibc 2.6.32-based)</li>
-							<li class="list-group-item"><i class="icon-ok text-success"></i> Solaris 10+ / Illumos</li>
-							<li class="list-group-item"><i class="icon-ok text-success"></i> MacOS/Darwin x86_64</li>
+							<li class="list-group-item"><i class="icon-ok text-success"></i> macOS/Darwin x86_64 (<strong>on hold</strong>)</li>
+							<li class="list-group-item"><i class="icon-ok text-success"></i> NetBSD/amd64</li>
+							<li class="list-group-item"><i class="icon-ok text-success"></i> Solaris 10+ / illumos</li>
 						</ul>
 						<div class="panel-footer">
 						</div>
@@ -403,7 +417,8 @@
 						</div>
 						<ul class="list-group list-group-flush text-center">
 							<li class="list-group-item"><i class="icon-ok text-success"></i> FreeBSD/ARM64</li>
-							<li class="list-group-item"><i class="icon-ok text-success"></i> Linux/AArch64</li>
+							<li class="list-group-item"><i class="icon-ok text-success"></i> Linux/ARM64</li>
+							<li class="list-group-item"><i class="icon-ok text-success"></i> MidnightBSD/amd64</li>
 						</ul>
 						<div class="panel-footer">
 						</div>
@@ -419,9 +434,8 @@
 							<p class="lead" title="Future support influenced by demand and contribution" style="cursor: pointer">Support increasingly unlikely</p>
 						</div>
 						<ul class="list-group list-group-flush text-center">
-							<li class="list-group-item"><i class="icon-ok text-success"></i> i386 (Linux and *BSD)</li>
 							<li class="list-group-item"><i class="icon-ok text-success"></i> OpenBSD/amd64</li>
-							<li class="list-group-item"><i class="icon-ok text-success"></i> NetBSD/amd64</li>
+							<li class="list-group-item"><i class="icon-ok text-success"></i> i386 (Linux and *BSD)</li>
 						</ul>
 						<div class="panel-footer">
 						</div>
@@ -434,11 +448,11 @@
 			<div class="container single-blog">
 				<p class="text">
 						A major requirement on platforms that are candidates for Ravenports
-						support is that GCC 8 must be available on the platform, and must
-						include fully functional C++, Fortran and Ada front-ends.  For exotic
-						platform/architecture combinations, this may require cross-compilation
-						bootstrapping along with new support patches to bring Ada tasking
-						capability to the candidate platform.
+						support is that a recent version of GCC must be available on the platform,
+						and must include fully functional C++, Fortran and Ada front-ends. For
+						exotic platform/architecture combinations, this may require cross-compilation
+						bootstrapping along with new support patches to bring Ada tasking capability
+						to the candidate platform.
 				</p>
 			</div>
 		</section>
@@ -456,17 +470,17 @@
 				</div>
 			</div>
 			<div class="container single-blog">
-				<p>The section will be re-worked.  The main User Guide has not been written.
+				<p>The section will be re-worked. The main User Guide has not been written.
 				The quickstart guides linked below tell how to install the Ravenports Administration
 				tool (ravenadm) with a host-specific system root and toolchain.
 				</p>
 				<p>There are complete repositories for each of the supported platforms, so anyone
 				familiar with pkg(8) on FreeBSD or DragonFly BSD will understand how to install the
-				prebuilt binaries immediately.  Linux users may require finding FreeBSD-based tutorials
-				to grasp it better.  This should be addressed in the upcoming user guides (TBW).</p>
-				<p>The ravenadm tool does have a complete set of man pages though.  <strong>ravenadm help</strong>
-				will show those pages.  Those familiar with the FreeBSD ports synth port
-				building tool will quickly adapt to ravenadm, as it has the same look and feel, and also
+				prebuilt binaries immediately. Linux users may require finding FreeBSD-based tutorials
+				to grasp it better. This should be addressed in the upcoming user guides (TBW).</p>
+				<p>The ravenadm tool does have a complete set of man pages though. <strong>ravenadm help</strong>
+				will show those pages. Those familiar with the (d)synth port building tool on DragonFly
+				BSD or FreeBSD will quickly adapt to ravenadm, as it has the same look and feel, and also
 				has the web-based dynamic build report.</p>
 			</div>
 			<div class="news">
@@ -474,24 +488,28 @@
 					<table>
 						<tbody>
 							<tr>
-								<td>FreeBSD</td>
-								<td><a href="https://github.com/jrmarino/Ravenports/wiki/quickstart-freebsd">FreeBSD users Quick Start guide</a></td>
-							</tr>
-							<tr>
 								<td>DragonFly</td>
 								<td><a href="https://github.com/jrmarino/Ravenports/wiki/quickstart-df">DragonFly BSD users Quick Start guide</a></td>
+							</tr>
+							<tr>
+								<td>FreeBSD</td>
+								<td><a href="https://github.com/jrmarino/Ravenports/wiki/quickstart-freebsd">FreeBSD users Quick Start guide</a></td>
 							</tr>
 							<tr>
 								<td>Linux</td>
 								<td><a href="https://github.com/jrmarino/Ravenports/wiki/quickstart-linux">Linux users Quick Start guide</a></td>
 							</tr>
 							<tr>
-								<td>Solaris</td>
-								<td><a href="https://github.com/jrmarino/Ravenports/wiki/quickstart-sunos">Solaris/Illumos users Quick Start guide</a></td>
+								<td>NetBSD</td>
+								<td><a href="https://github.com/jrmarino/Ravenports/wiki/quickstart-netbsd">NetBSD users Quick Start guide</a></td>
 							</tr>
 							<tr>
-								<td>MacOS</td>
-								<td><a href="https://github.com/jrmarino/Ravenports/wiki/quickstart-macos">MacOS/Darwin users Quick Start guide</a></td>
+								<td>Solaris</td>
+								<td><a href="https://github.com/jrmarino/Ravenports/wiki/quickstart-sunos">Solaris/illumos users Quick Start guide</a></td>
+							</tr>
+							<tr>
+								<td>macOS</td>
+								<td>(Note: Platform currently on hold!) <a href="https://github.com/jrmarino/Ravenports/wiki/quickstart-macos">macOS/Darwin users Quick Start guide</a></td>
 							</tr>
 						</tbody>
 					</table>
@@ -513,10 +531,10 @@
 		
 			<div class="container single-blog">
 				<p class="text">
-				The source tree for Ravenports is under constant update.  However, the
-				Ravenports tree is only generated on a weekly basis.  Minor updates to
-				heavily used ports can cause the majority of the tree to require a
-				rebuild, so the policy is to provide all the updates in one step each Tuesday.
+				The source tree for Ravenports is under constant update. However, the
+				Ravenports tree is only generated on roughly a weekly basis. Minor updates to
+				heavily used ports can cause the majority of the tree to require a rebuild,
+				so the policy is to provide all the updates in one step.
 				</p>
 			</div>
 			
@@ -534,13 +552,11 @@
 								<div class="col-md-10">
 									<div class="feature-text">
 										<h4>Perl ports</h4>
-										<p>
-										With many thousand perl modules with CPAN, updates are seen many times per day.   
+										<p>With many thousand perl modules with CPAN, updates are seen many times per day.
 										Perl alone causes serious build churn based on these daily updates, and that’s 
-										without any kind of integrity checking.  Therefore the policy is to update perl 
-										modules a couple of times per week. Before a release is tagged, a full 
-										build check is performed internally to ensure the perl ecosystem remains functional.  
-										</p>
+										without any kind of integrity checking. Therefore the policy is to update perl
+										modules a couple of times per week. Before a release is tagged, a full build
+										check is performed internally to ensure the perl ecosystem remains functional.</p>
 									</div>
 								</div>
 							</div>
@@ -558,11 +574,9 @@
 								<div class="col-md-10">
 									<div class="feature-text">
 										<h4>Python ports</h4>
-										<p>
-										Python modules are similar to perl, but are more volatile.  Typically python
+										<p>Python modules are similar to perl, but are more volatile. Typically python
 										modules are updated the same day as perl, and they are also integrity build-tested
-										before a release is tagged.
-										<p>
+										before a release is tagged.</p>
 									</div>
 								</div>
 							</div>
@@ -585,7 +599,12 @@
 								<div class="col-md-10">
 									<div class="feature-text">
 										<h4>Security and vulnerability updates</h4>
-										<p>For non-commercial users, security updates appear as regular updates every Tuesday.  These updates may appear as version updates.  Commercial service users that have specified and locked down software versions (older than the current Ravenports tree) will receive security as port revisions accompanied by patches each Tuesday.  If patches aren’t feasible, the client will be informed as soon as possible to determine how best to address newly-known security issue.)</p>
+										<p>For non-commercial users, security updates appear as regular updates with every
+										release. These updates may appear as version updates. Commercial service users that
+										have specified and locked down software versions (older than the current Ravenports
+										tree) will receive security as port revisions accompanied by patches each Tuesday.
+										If patches aren’t feasible, the client will be informed as soon as possible to
+										determine how best to address newly-known security issue.)</p>
 									</div>
 								</div>
 							</div>
@@ -603,7 +622,7 @@
 								<div class="col-md-10">
 									<div class="feature-text">
 										<h4>Binary package updates</h4>
-										<p>As soon as the Ravenports tree is generated, incremental building of packages will commence on all supported repositories.  Depending on the extent of the changes, new packages should be available within a few hours to a couple of days after the generation of the source tree.  For commercial service clients, a notice will be sent when new packages are ready for download.</p>
+										<p>As soon as the Ravenports tree is generated, incremental building of packages will commence on all supported repositories. Depending on the extent of the changes, new packages should be available within a few hours to a couple of days after the generation of the source tree. For commercial service clients, a notice will be sent when new packages are ready for download.</p>
 									</div>
 								</div>
 							</div>
@@ -632,14 +651,12 @@
 			</div>
 
 			<div class="container">
-				<p>
-						Every leg of the Ravenports Triad consists of Free and
-						Open-Source Software (FOSS), released under the permissive
-						Internet Systems Consortium (ISC) License.  Contributions are
-						welcome and may appear in many forms, such as:
-				</p>
+				<p>Every leg of the Ravenports Triad consists of Free and
+				Open-Source Software (FOSS), released under the permissive
+				Internet Systems Consortium (ISC) License. Contributions are
+				welcome and may appear in many forms, such as:</p>
 				<div class="contrib">
-					<ul >
+					<ul>
 						<li>bug reports</li>
 						<li>patch submissions</li>
 						<li>port adoption and maintenance</li>
@@ -654,10 +671,8 @@
 					For the time being, the Github issue tracking system is available
 					for users to report bugs and any security issues that may not have
 					been known or addressed yet.</p>
-					<p>
-						Report here:
-						<a href="https://github.com/jrmarino/ravensource/issues">https://github.com/jrmarino/ravensource/issues</a>
-					</p>
+					<p>Report here:
+					<a href="https://github.com/jrmarino/ravensource/issues">https://github.com/jrmarino/ravensource/issues</a></p>
 				</div>
 				<div class="contrib-entry">
 					<h4>Submission of patches and new ports</h4>
@@ -665,22 +680,18 @@
 					through a dedicated interface that will put the submission in a build
 					queue and test build the affected ports on all supported platforms
 					automatically.  If the build tests pass automated tested, the submissions
-					will be forward for human inspection and inclusion.  However, we aren’t there yet.</p>
-					<p>
-						All patches must be build tested locally.  If they pass the submitter’s
-						own testing, the best approach is to submit the contribution as a github
-						pull request here: 
-						<a href="https://github.com/jrmarino/ravensource/pulls">https://github.com/jrmarino/ravensource/pulls</a>
-					</p>
-					<p>
-						The process is the same when submitted an entirely new port, with one
-						additional requirement.  The person that creates and submits the port
-						agrees to be listed as the port’s maintainer for at least 6 months.  It
-						is expected that submitter fully tests the new port on at least one platform.
-					</p>
+					will be forward for human inspection and inclusion. However, we aren’t there yet.</p>
+					<p>All patches must be build tested locally.  If they pass the submitter’s
+					own testing, the best approach is to submit the contribution as a github
+					pull request here:
+					<a href="https://github.com/jrmarino/customsource/pulls">https://github.com/jrmarino/customsource/pulls</a></p>
+					<p>The process is the same when submitted an entirely new port, with one
+					additional requirement.  The person that creates and submits the port
+					agrees to be listed as the port’s maintainer for at least 6 months.  It
+					is expected that submitter fully tests the new port on at least one platform.</p>
 					<p>The pull request description for a new port should provide the follow information:</p>
 					<div class="contrib">
-					<ul >
+					<ul>
 						<li>Synopsis of what functionality the new port provides (what the software does)</li>
 						<li>Impact of not approving the port for inclusion</li>
 						<li>Optionally: what type of user is likely to benefit from its inclusion</li>
@@ -690,20 +701,37 @@
 				</div>
 				<div class="contrib-entry">
 					<h4>Port adoption</h4>
-					<p>Each port may have one or more maintainers.  Most ports have no listed maintainer or are generated by a script.  There are benefits to having a specific person or team of people responsible for maintenance and update of a port.  Ideally the maintainer should be a regular user of the port’s software.  This helps porting errors to be detected quickly and also allows for quick confirmation of reported bugs.  A real user is more motivated to fix bugs and keep up with the latest software upgrades.</p>
-					<p>Those volunteering to be the primary maintainer of a port are expected to be familiar with the
+					<p>Each port may have one or more maintainers. Most ports have no listed
+					maintainer or are generated by a script. There are benefits to having a
+					specific person or team of people responsible for maintenance and update of
+					a port. Ideally the maintainer should be a regular user of the port’s software.
+					This helps porting errors to be detected quickly and also allows for quick
+					confirmation of reported bugs. A real user is more motivated to fix bugs and
+					keep up with the latest software upgrades.</p>
+					<p>Those volunteering to be the primary maintainer of a port are expected to
+					be familiar with the
 					<a href="https://github.com/jrmarino/Ravenports/wiki/Ravenporters_Guide">Ravenporter's Guide</a>
-					and have the technical skills necessary for basic port maintenance and troubleshooting.  They are also expected to handle bug reports to their natural conclusion.  If multiple maintainers are listed on a port, they are expected to communicate internally (each speak for the others on bug trackers, etc.).</p>
-					<p>Requests to be adopt ports can be made either through the Github bug tracker or submitted as changes via a github pull request.  The latter method is preferred.</p>
+					and have the technical skills necessary for basic port maintenance and
+					troubleshooting. They are also expected to handle bug reports to their
+					natural conclusion. If multiple maintainers are listed on a port, they are
+					expected to communicate internally (each speak for the others on bug
+					trackers, etc.).</p>
+					<p>Requests to adopt ports can be made either through the Github issue
+					tracker or submitted as changes via a github pull request. The latter
+					method is preferred.</p>
 				</div>
 				<div class="contrib-entry">
 					<h4>Binary package and repository generation</h4>
-					<p>
-						This contribution forms when somebody wishes to extend Ravenports
-						support to lesser-used platforms or architectures.  The new platform support
-						requires the contributor to have the necessary hardware to accomplish the system
-						root and toolchain bootstrapping.  Additionally the contributor is expected to build a complete set of binary packages and upload them at regular intervals.  That will likely require per-platform adjustments to existing and incoming ports, so this is not a trivial contribution.  Serious contributions are more than welcome, but there will be some vetting to ascertain the skill level and the commitment level of any person or team offering to extend Ravenports for non-commercial support use.
-					</p>
+					<p>This contribution forms when somebody wishes to extend Ravenports
+					support to lesser-used platforms or architectures. The new platform support
+					requires the contributor to have the necessary hardware to accomplish the
+					system root and toolchain bootstrapping. Additionally the contributor is
+					expected to build a complete set of binary packages and upload them at regular
+					intervals. That will likely require per-platform adjustments to existing and
+					incoming ports, so this is not a trivial contribution. Serious contributions are
+					more than welcome, but there will be some vetting to ascertain the skill level
+					and the commitment level of any person or team offering to extend Ravenports
+					for non-commercial support use.</p>
 				</div>
 			</div>
 
@@ -718,7 +746,7 @@
 				<div class="row">
 					<div class="col-sm-12">
 						<div class="title">
-							<h3>Frequently Aksed <span>Questions</span></h3>
+							<h3>Frequently Asked <span>Questions</span></h3>
 						</div>
 					</div>
 				</div>
@@ -871,8 +899,101 @@
 					<table>
 						<tbody>
 							<tr>
+								<td>2021-10-20</td>
+								<td>NetBSD support is now available. Various problems had to be solved to
+								bring the modern Ravenports toolchain over and to work with some specifics
+								of that platform. Work on fixing several ports is ongoing but a considerable
+								number of packages are already available.
+							</tr>
+							<tr>
+								<td>2021-08-25</td>
+								<td>Major toolchain upgrade: All packages are now built with GCC 11.2.0 and
+								binutils 2.35.1 instead of 9.3.0 and 2.37. The exception here is Solaris since
+								GCC 10+ do no longer support Solaris 10. The very old system libraries of
+								Solaris 10u8 have become a more and more of a problem for various ports. The
+								most likely path forward will be to drop Solaris support and pick a modern
+								illumos distribution instead.
+							</tr>
+							<tr>
+								<td>2020-12-26</td>
+								<td>FreeBSD base system has been upgraded from 11.1 to 12.2. This means that
+								all packages built from now on require 12.2 or later.</td>
+							</tr>
+							<tr>
+								<td>2020-06-07</td>
+								<td>Everything necessary to work with TeX has now been added to Ravenports,
+								finishing a major porting effort. Packages for the full TeXlive 2020
+								distribution are available with subpackages for the engines and other
+								components to pick from. The latest versions of the TeX IDE Texstudio and the
+								WYSIWYM TeX document processor are available as well.</td>
+							</tr>
+							<tr>
+								<td>2020-05-11</td>
+								<td>Ravenports now supports CPE information. It has already been added to
+								most of the existing ports.</td>
+							</tr>
+							<tr>
+								<td>2020-04-15</td>
+								<td>A new 'nls' subpackage has been introduced and ports that previously
+								supported internationalization via variants have been converted. It is
+								expected that all new ports will offer localization support (if applicable)
+								and the existing ones that could support it will do so in time, too.
+								Also a port for the R language has been added as well as a facility to
+								auto-create R ports from CRAN.</td>
+							</tr>
+							<tr>
+								<td>2019-11-22</td>
+								<td>Major toolchain upgrade: All packages are now built with GCC 9.2.0 and
+								binutils 2.33.1 instead of 8.3.0 and 2.32..</td>
+							</tr>
+							<tr>
+								<td>2019-07-19</td>
+								<td>Ravenport's fork of FreeBSD's package manager has been renamed from pkg to
+								ravensw and various additional portability fixes were added. Unfortunately it's
+								still flaky on Linux.</td>
+							</tr>
+							<tr>
+								<td>2019-02-19</td>
+								<td>Ravenports supports installing more than one TLS library (libressl, openssl,
+								libressl-devel, openssl-devel) on the same system at the same time. This makes it
+								possible to install software with specific requirements that were mutually
+								exclusive before. Support for the MacOS platform is on hold for now.</td>
+							</tr>
+							<tr>
+								<td>2018-12-22</td>
+								<td>Rust is now available on all platforms except Solaris/illumos and MacOS.
+								With lumina (Qt-based) and Xfce4 (GTK+-based) two full desktop environments are
+								available where basically all components have been ported. Alternatively there are
+								various window managers to pick from.</td>
+							</tr>
+							<tr>
+								<td>2018-10-04</td>
+								<td>Initial support for MacOS High Sierra (10.13.6) and later has landed. This
+								platform still requires some special workarounds. Therefore RP only provides
+								pre-built packages but does not yet support custom package building.</td>
+							</tr>
+							<tr>
+								<td>2018-07-31</td>
+								<td>Major toolchain upgrade: All packages are now built with GCC 8.2.0 and
+								binutils 2.31 instead of 7.3.0 and 2.30.</td>
+							</tr>
+							<tr>
+								<td>2018-05-25</td>
+								<td>Solaris 10u8 and newer as well as illumos are now supported (x86_64 only). However
+								due to technical limitations, package building only works on 10u8 systems.</td>
+							</tr>
+							<tr>
+								<td>2018-04-03</td>
+								<td>Ports for almost all components of X11 are available for all supported platforms.</td>
+							</tr>
+							<tr>
+								<td>2017-10-05</td>
+								<td>Ravenports packages uses Zstandard compression instead of xz now. This speeds up
+								the packaging phase considerably while yielding only slightly bigger packages.</tr>
+							</tr>
+							<tr>
 								<td>2017-09-01</td>
-								<td>Website online.  User guides still being developed.  User feedback welcome.</td>
+								<td>Website online. User guides still being developed. User feedback welcome.</td>
 							</tr>
 						</tbody>
 					</table>
