@@ -899,97 +899,136 @@
 					<table>
 						<tbody>
 							<tr>
+								<td>2023-08-25</td>
+								<td>Major toolchain upgrade: All packages are now built with <em>GCC 13.2.0</em>
+								and <em>binutils 2.41</em> instead of 11.2.0 and 2.35.1. Also the sysroots port
+								has been split to one per operating system. <em>DragonFly BSD</em> and <em>FreeBSD</em>
+								have had standard variants for versions <em>6.4</em> and <em>13.2</em> added
+								in addition to the previous 6.2 and 12.2 respectively (rather then replacing them).
+								Linux/glibc now has a new standard variant based on Debian 12 in addition to
+								Ubuntu 16.04.</td>
+							</tr>
+							<tr>
+								<td>2023-04-17</td>
+								<td><em>MidnightBSD</em> is now supported. Platform bring-up has been completed
+								and an initial package set uploaded. A new USES module (mbsdfix) was added to
+								the framework to automatically handle software with too old configure scripts.</td>
+							</tr>
+							<tr>
+								<td>2023-01-24</td>
+								<td>The packaging scheme is being reorganized: Development files will be split
+								out into subpackages, same for manpages. It is expected to complete this for all
+								the ports with <em>single</em> variants in two weeks or so. The rest will be
+								converted over time during regular port version upgrades and maintenance. Also
+								the first bunch of KDE ports have been committed. Work on that has stopped, though
+								(missing wayland support on most platforms makes it impractical).</td>
+							</tr>
+							<tr>
+								<td>2022-10-15</td>
+								<td>A new <em>Ravenports</em> organization has been created on GitHub
+								and all relevant repositories were transferred over.</td>
+							</tr>
+							<tr>
+								<td>2022-09-06</td>
+								<td>Ravenports switched away from GL libreries provided by <em>mesa</em> to those
+								from <em>libglvnd</em>. While reworking many ports as part of the graphics stack
+								migration, introspection has been made optional for many GTK-based ports.</td>
+							</tr>
+							<tr>
 								<td>2021-10-20</td>
-								<td>NetBSD support is now available. Various problems had to be solved to
+								<td><em>NetBSD</em> support is now available. Various problems had to be solved to
 								bring the modern Ravenports toolchain over and to work with some specifics
 								of that platform. Work on fixing several ports is ongoing but a considerable
-								number of packages are already available.
+								number of packages are already available.</td>
 							</tr>
 							<tr>
 								<td>2021-08-25</td>
-								<td>Major toolchain upgrade: All packages are now built with GCC 11.2.0 and
-								binutils 2.35.1 instead of 9.3.0 and 2.37. The exception here is Solaris since
-								GCC 10+ do no longer support Solaris 10. The very old system libraries of
-								Solaris 10u8 have become a more and more of a problem for various ports. The
+								<td>Major toolchain upgrade: All packages are now built with <em>GCC 11.2.0</em>
+								and <em>binutils 2.35.1</em> instead of 9.3.0 and 2.34. The exception here is
+								Solaris since GCC 10+ do no longer support Solaris 10. The very old system
+								libraries of 10u8 have become a more and more of a problem for various ports. The
 								most likely path forward will be to drop Solaris support and pick a modern
-								illumos distribution instead.
+								illumos distribution instead.</td>
 							</tr>
 							<tr>
 								<td>2020-12-26</td>
-								<td>FreeBSD base system has been upgraded from 11.1 to 12.2. This means that
-								all packages built from now on require 12.2 or later.</td>
+								<td><em>FreeBSD base system</em> has been upgraded from 11.1 to 12.2. This means
+								that all packages built from now on require <em>12.2-RELEASE</em> or later.</td>
 							</tr>
 							<tr>
 								<td>2020-06-07</td>
-								<td>Everything necessary to work with TeX has now been added to Ravenports,
-								finishing a major porting effort. Packages for the full TeXlive 2020
-								distribution are available with subpackages for the engines and other
-								components to pick from. The latest versions of the TeX IDE Texstudio and the
-								WYSIWYM TeX document processor are available as well.</td>
+								<td>Everything necessary to work with <em>TeX</em> has now been added to
+								Ravenports, finishing a major porting effort. Packages for the full <em>TeXlive
+								2020</em> distribution are available with subpackages for the engines and other
+								components to pick from. The latest versions of the TeX IDE <em>texstudio</em> and
+								the WYSIWYM TeX document processor <em>LyX</em> are available as well.</td>
 							</tr>
 							<tr>
 								<td>2020-05-11</td>
-								<td>Ravenports now supports CPE information. It has already been added to
+								<td>Ravenports now supports <em>CPE</em> information. It has already been added to
 								most of the existing ports.</td>
 							</tr>
 							<tr>
 								<td>2020-04-15</td>
-								<td>A new 'nls' subpackage has been introduced and ports that previously
+								<td>A new <em>nls</em> subpackage has been introduced and ports that previously
 								supported internationalization via variants have been converted. It is
 								expected that all new ports will offer localization support (if applicable)
-								and the existing ones that could support it will do so in time, too.
-								Also a port for the R language has been added as well as a facility to
-								auto-create R ports from CRAN.</td>
+								and the existing ones that could support it will do so in time, too. Also a port
+								for the <em>R language</em> has been added as well as a facility to auto-create
+								R ports from CRAN.</td>
 							</tr>
 							<tr>
 								<td>2019-11-22</td>
-								<td>Major toolchain upgrade: All packages are now built with GCC 9.2.0 and
-								binutils 2.33.1 instead of 8.3.0 and 2.32..</td>
+								<td>Major toolchain upgrade: All packages are now built with <em>GCC 9.2.0</em>
+								and <em>binutils 2.33.1</em> instead of 8.3.0 and 2.32.</td>
 							</tr>
 							<tr>
 								<td>2019-07-19</td>
-								<td>Ravenport's fork of FreeBSD's package manager has been renamed from pkg to
-								ravensw and various additional portability fixes were added. Unfortunately it's
-								still flaky on Linux.</td>
+								<td>Ravenport's fork of FreeBSD's package manager has been renamed from
+								<em>pkg</em> to <em>ravensw</em> and various additional portability fixes were
+								added. Unfortunately it's still flaky on Linux.</td>
 							</tr>
 							<tr>
 								<td>2019-02-19</td>
-								<td>Ravenports supports installing more than one TLS library (libressl, openssl,
-								libressl-devel, openssl-devel) on the same system at the same time. This makes it
-								possible to install software with specific requirements that were mutually
-								exclusive before. Support for the MacOS platform is on hold for now.</td>
+								<td>Ravenports supports installing more than one <em>TLS library</em> (libressl,
+								openssl, libressl-devel, openssl-devel) on the same system at the same time. This
+								makes it possible to install software with specific requirements that were mutually
+								exclusive before. Support for the <em>MacOS</em> platform is on hold for now.</td>
 							</tr>
 							<tr>
 								<td>2018-12-22</td>
-								<td>Rust is now available on all platforms except Solaris/illumos and MacOS.
-								With lumina (Qt-based) and Xfce4 (GTK+-based) two full desktop environments are
-								available where basically all components have been ported. Alternatively there are
-								various window managers to pick from.</td>
+								<td><em>Rust</em> is now available on all platforms except Solaris/illumos and MacOS.
+								With <em>lumina</em> (Qt-based) and <em>Xfce4</em> (GTK+-based) two full desktop
+								environments are available where basically all components have been ported.
+								Alternatively there are various window managers to pick from.</td>
 							</tr>
 							<tr>
 								<td>2018-10-04</td>
-								<td>Initial support for MacOS High Sierra (10.13.6) and later has landed. This
-								platform still requires some special workarounds. Therefore RP only provides
+								<td>Initial support for <em>MacOS</em> High Sierra (10.13.6) and later has landed.
+								This platform still requires some special workarounds. Therefore RP only provides
 								pre-built packages but does not yet support custom package building.</td>
 							</tr>
 							<tr>
 								<td>2018-07-31</td>
-								<td>Major toolchain upgrade: All packages are now built with GCC 8.2.0 and
-								binutils 2.31 instead of 7.3.0 and 2.30.</td>
+								<td>Major toolchain upgrade: All packages are now built with <em>GCC 8.2.0</em> and
+								<em>binutils 2.31</em> instead of 7.3.0 and 2.30.</td>
 							</tr>
 							<tr>
 								<td>2018-05-25</td>
-								<td>Solaris 10u8 and newer as well as illumos are now supported (x86_64 only). However
-								due to technical limitations, package building only works on 10u8 systems.</td>
+								<td><em>Solaris</em> 10u8 and newer as well as <em>illumos</em> are now supported
+								(x86_64 only). However due to technical limitations, package building only works on
+								10u8 systems.</td>
 							</tr>
 							<tr>
 								<td>2018-04-03</td>
-								<td>Ports for almost all components of X11 are available for all supported platforms.</td>
+								<td>Ports for almost all components of <em>X11</em> are available for all supported
+								platforms.</td>
 							</tr>
 							<tr>
 								<td>2017-10-05</td>
-								<td>Ravenports packages uses Zstandard compression instead of xz now. This speeds up
-								the packaging phase considerably while yielding only slightly bigger packages.</tr>
+								<td>Ravenports packages uses <em>Zstandard</em> compression instead of <em>xz</em> now.
+								This speeds up the packaging phase considerably while yielding only slightly bigger
+								packages.</tr>
 							</tr>
 							<tr>
 								<td>2017-09-01</td>
